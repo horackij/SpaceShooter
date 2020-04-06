@@ -4,4 +4,6 @@ Saved/
 Build/
 Binaries/
 DerivedDataCache/
+.vs/
+
 *.VC.db
