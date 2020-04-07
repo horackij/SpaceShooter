@@ -3,6 +3,7 @@
 
 #include "ShipController.h"
 #include "Components/BoxComponent.h"
+#include "BulletController.h"
 
 // Sets default values
 AShipController::AShipController()
@@ -39,8 +40,8 @@ void AShipController::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	InputComponent->BindAxis("MoveX", this, &AShipController::Move_XAxis);
-
 	InputComponent->BindAxis("MoveY", this, &AShipController::Move_YAxis);
+	InputComponent->BindAction("Shoot", IE_Pressed, this, &AShipController::OnShoot);
 
 }
 
@@ -51,5 +52,15 @@ void AShipController::Move_XAxis(float AxisValue)
 void AShipController::Move_YAxis(float AxisValue)
 {
 	CurrentVelocity.Y = AxisValue * 100.0f;
+}
+void AShipController::OnShoot()
+{
+	UWorld* World = GetWorld();
+	if (World)
+	{
+		FVector Location = GetActorLocation();
+
+		World->SpawnActor<ABulletController>(BulletBlueprint, Location, FRotator::ZeroRotator);
+	}
 }
 

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{FDACEF55-F350-4D0C-A4BC-F9A6D60F52D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{8D6EFA5E-DB14-458C-8401-E7D4A2E5D052}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise", "Enterprise", "{87F358C3-3935-4EDD-9036-C1D2E6282438}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise", "Enterprise", "{600420D7-DA08-4B88-8FC3-4D1559889F84}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{DAD47771-B316-48CC-B07D-242E5541D199}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{FFB99ED9-669E-465A-9A21-4761D65CB012}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceShooter", "Intermediate\ProjectFiles\SpaceShooter.vcxproj", "{30D803A2-9B64-47C4-A8F1-FA2FE1479537}"
 EndProject
@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\Project
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Studio", "Intermediate\ProjectFiles\Studio.vcxproj", "{78D05160-26A7-4F30-803A-5EE6CE061120}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{E1DF597F-2E9B-4191-9193-DFBF8307DEB5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{F098F970-AAE9-4B0E-877D-A602F45DBA80}"
 	ProjectSection(SolutionItems) = preProject
 		D:\Program Files\Epic Games\UE_4.23\Engine\Extras\VisualStudioDebugging\UE4.natvis = D:\Program Files\Epic Games\UE_4.23\Engine\Extras\VisualStudioDebugging\UE4.natvis
 	EndProjectSection
@@ -123,8 +123,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{691D1C83-3629-4B4C-BD31-E95BF588782D} = {FDACEF55-F350-4D0C-A4BC-F9A6D60F52D5}
-		{78D05160-26A7-4F30-803A-5EE6CE061120} = {87F358C3-3935-4EDD-9036-C1D2E6282438}
-		{30D803A2-9B64-47C4-A8F1-FA2FE1479537} = {DAD47771-B316-48CC-B07D-242E5541D199}
+		{691D1C83-3629-4B4C-BD31-E95BF588782D} = {8D6EFA5E-DB14-458C-8401-E7D4A2E5D052}
+		{78D05160-26A7-4F30-803A-5EE6CE061120} = {600420D7-DA08-4B88-8FC3-4D1559889F84}
+		{30D803A2-9B64-47C4-A8F1-FA2FE1479537} = {FFB99ED9-669E-465A-9A21-4761D65CB012}
 	EndGlobalSection
 EndGlobal
