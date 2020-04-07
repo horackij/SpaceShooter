@@ -4,6 +4,8 @@
 #include "ShipController.h"
 #include "Components/BoxComponent.h"
 #include "BulletController.h"
+#include "EnemyController.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AShipController::AShipController()
@@ -12,6 +14,9 @@ AShipController::AShipController()
 	PrimaryActorTick.bCanEverTick = true;
 
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Root"));
+	CollisionBox->SetGenerateOverlapEvents(true);
+	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AShipController::OnOverlap);
+	
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
@@ -63,4 +68,14 @@ void AShipController::OnShoot()
 		World->SpawnActor<ABulletController>(BulletBlueprint, Location, FRotator::ZeroRotator);
 	}
 }
+void AShipController::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (OtherActor->IsA(AEnemyController::StaticClass()))
+	{
+		Died = true;
+		this->SetActorHiddenInGame(true);
 
+		UGameplayStatics::SetGamePaused(GetWorld(), true);
+
+	}
+}
